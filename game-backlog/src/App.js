@@ -72,7 +72,7 @@ function App() {
                 >
               
                
-                  <i className={`flag flag-${pickedLanguage} mx-auto`}></i>Deutsch
+                  <i className={`flag flag-${pickedLanguage}`}></i>Deutsch
                 </MDBDropdownItem>
               </MDBDropdownMenu>
             </MDBDropdown>
