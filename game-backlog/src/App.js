@@ -48,9 +48,9 @@ function App() {
                 </MDBBadge>
               </MDBDropdownToggle>
               <MDBDropdownMenu>
-                <MDBDropdownItem link>Action</MDBDropdownItem>
-                <MDBDropdownItem link>Another action</MDBDropdownItem>
-                <MDBDropdownItem link>Something else here</MDBDropdownItem>
+                <MDBDropdownItem link>Logout</MDBDropdownItem>
+                <MDBDropdownItem link>Games</MDBDropdownItem>
+                <MDBDropdownItem link>My Account</MDBDropdownItem>
               </MDBDropdownMenu>
             </MDBDropdown>
             <MDBDropdown>
@@ -65,42 +65,14 @@ function App() {
                 <MDBDropdownItem
                   onClick={() => {
                     i18n.changeLanguage("en");
-                    setPickedLanguage("united-kingdom");
+                    setPickedLanguage("united-States");
                   }}
                   link
                   href="#"
                 >
-                  <i className="flag-united-kingdom flag"></i>English
-                </MDBDropdownItem>
-                <MDBDropdownItem
-                  onClick={() => {
-                    i18n.changeLanguage("pl");
-                    setPickedLanguage("poland");
-                  }}
-                  link
-                  href="#"
-                >
-                  <i className="flag flag-poland"></i>Polski
-                </MDBDropdownItem>
-                <MDBDropdownItem
-                  onClick={() => {
-                    i18n.changeLanguage("ja");
-                    setPickedLanguage("japan");
-                  }}
-                  link
-                  href="#"
-                >
-                  <i className="flag flag-japan"></i>日本語
-                </MDBDropdownItem>
-                <MDBDropdownItem
-                  onClick={() => {
-                    i18n.changeLanguage("de");
-                    setPickedLanguage("germany");
-                  }}
-                  link
-                  href="#"
-                >
-                  <i className="flag flag-germany"></i>Deutsch
+              
+               
+                  <i className={`flag flag-${pickedLanguage} mx-auto`}></i>Deutsch
                 </MDBDropdownItem>
               </MDBDropdownMenu>
             </MDBDropdown>
