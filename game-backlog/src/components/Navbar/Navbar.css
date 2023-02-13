@@ -1,0 +1,12 @@
+.head {
+  background-color: rgb(51, 51, 216);
+}
+
+.text {
+  color: rgb(226, 229, 233);
+}
+
+.left {
+  display: flex;
+  justify-content: end;
+}
