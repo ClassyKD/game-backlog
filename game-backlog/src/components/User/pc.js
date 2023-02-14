@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom"
+
 function Games() {
   const [pcData, setPcData] = useState([]);
 

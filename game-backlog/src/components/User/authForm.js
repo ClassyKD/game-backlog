@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { ADD_USER, LOGIN_USER } from '../utils/transForm';
+import { ADD_USER, LOGIN_USER } from '../../../utils/transForm';
 
 function AuthForm(props) {
 
