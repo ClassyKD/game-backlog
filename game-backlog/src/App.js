@@ -26,7 +26,7 @@ function App() {
           <Route path="/forgotpw" element={<Forgotpw/>}/>
           <Route path="/mygames" element={<Landing/>}/>
           <Route path="/home" element={<Home/>}/>
-          <Route path="/side" element={<Sidebar/>}/>
+          {/* <Route path="/side" element={<Sidebar/>}/> */}
         </Routes>
       </BrowserRouter>
       <Footer />

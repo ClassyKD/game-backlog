@@ -28,11 +28,15 @@ function Login() {
 
     setFillActive(value);
   };
+  // log inform state in will b an object 
+  // regist form state w email and pass 
+  // both will be an object with the input value 
+  // register form state name email 
 const [email, setEmail] = useState('');
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
+// what form are u in register or log in
   const handleInputChange = (e) => {
     // Getting the value and name of the input which triggered the change
     const { target } = e;
@@ -267,6 +271,8 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
+                        name = "userName"
+                        value = {userName}
                         type="email"
                         id="registerEmail"
                         label="Email"
@@ -274,6 +280,8 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
+                        name = "password"
+                        value = {password}
                         type="password"
                         id="registerPassword"
                         label="Password"
@@ -281,6 +289,8 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
+                        name = "password"
+                        value = {password}
                         type="password"
                         id="registerRepeatPassword"
                         label="Repeat password"
@@ -308,4 +318,4 @@ const [email, setEmail] = useState('');
 }
 
 export default Login;
-console.log(MDBBtn)
+
