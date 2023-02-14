@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
-import { Link } from "react-router-dom";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "react";
+import gameScreenshot from "../../App"
+import { Link } from "react";
 
 function Landing(props) {
   const [gameData, setGameData] = useState([]);
@@ -53,7 +54,7 @@ function Landing(props) {
               any platform you wish.
             </h1>
           </div>
-          <img src={gameScreenshot} className="landingContainerSS"></img>
+          <img src="" className="landingContainerSS"></img>
           <div className="apiContainer">
             <h1 className="biggestText">
               With RAWG API, you can see game data and ratings, plus

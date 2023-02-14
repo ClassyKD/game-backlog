@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../index.css";
-import pclogo from "../images/tower-pc.png";
+import pclogo from "../images/pc.png";
 import playstationlogo from "../images/playstation.png";
 import xboxlogo from "../images/xbox.png";
 import nSwitchlogo from "../images/nintendo-switch.png";
