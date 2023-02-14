@@ -8,6 +8,14 @@ import Forgotpw from "./components/Login/Forgotpw";
 import Landing from "./components/User/landingPage";
 import Sidebar from "./components/Sidebar/sidebar";
 
+
+
+
+
+
+
+
+
 function App() {
   return (
     <div>
