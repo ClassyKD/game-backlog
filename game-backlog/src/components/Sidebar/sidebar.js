@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "../../index.css";
-import pclogo from "../../images/";
-import playstationlogo from "./images/"
+import pclogo from "../../src/images/computer-steam.jpeg";
+import playstationlogo from "../../images/"
 import xboxlogo from "../images/xbox.png";
 import nSwitchlogo from "../images/nintendo-switch.png";
 
