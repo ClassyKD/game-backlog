@@ -1,9 +1,10 @@
-import React from 'react';
-import Results from '../../page/results'
-import { useState } from 'react';
+
+import {useState} from 'react';
+import Results from '../components/Results'
 
 
-function Home (props) {
+
+const Search = (props) => {
     const [search, setSearch] = useState("")
     const [gameResults, setGameResults] = useState([])
 
@@ -23,7 +24,7 @@ const onSubmit = (event) => {
     .then(({results}) => {
        var error = results === undefined ? alert('no games found') : setGameResults(results)
         console.log(error)
-        // results will be sent as a prop to the Results.js in the pages folder.
+        // results will be sent as a prop to the Results.js in the components folder.
     })
     setSearch("")
 }
@@ -42,5 +43,4 @@ const onSubmit = (event) => {
 }
 
 
-export default Home; 
-
+export default Search; 
