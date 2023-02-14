@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './style.css';
-import Login from './Login/login';
+import Login from 'login';
 
 // Here we import a helper function that will check if the email is valid
 import { checkPassword, validateEmail } from '../../utils/helpers';
