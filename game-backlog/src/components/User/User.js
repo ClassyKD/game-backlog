@@ -1,4 +1,4 @@
-import { PROFILE_QUERY } from '../utils/queries';
+import { PROFILE_QUERY } from '../../../utils/query';
 
 
 function Users() {
