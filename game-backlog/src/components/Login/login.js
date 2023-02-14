@@ -14,6 +14,7 @@ import {
   MDBCheckbox,
   MDBInput,
   MDBBtn,
+  MDBNavbarLink
 } from "mdb-react-ui-kit";
 import { checkPassword, validateEmail } from "../../utils/helpers";
 
@@ -184,7 +185,7 @@ const [email, setEmail] = useState('');
                           md="6"
                           className="d-flex justify-content-center"
                         >
-                          <a href="#!">Forgot password?</a>
+                          <MDBNavbarLink href="Forgotpw">Forgot password?</MDBNavbarLink>
                         </MDBCol>
                       </MDBRow>
 
@@ -194,7 +195,12 @@ const [email, setEmail] = useState('');
 
                       <div className="text-center">
                         <p>
-                          Not a member? <a href="#!">Register</a>
+                          Not a member? <MDBTabsLink
+                      onClick={() => handleFillClick("tab-register")}
+                      active={fillActive === "tab-register"}
+                    >
+                      Register
+                    </MDBTabsLink>
                         </p>
                       </div>
                     </form>
