@@ -35,15 +35,15 @@ import {
         <MDBCollapse navbar show={GameLog}>
           <MDBNavbarNav className='left'>
             <MDBNavbarItem >
-              <MDBNavbarLink href='#' className="text">
+              <MDBNavbarLink href='/Home' className="text">
                 Home
               </MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#' className="text">My Games</MDBNavbarLink>
+              <MDBNavbarLink href='/mygames' className="text">My Games</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
-              <MDBNavbarLink href='#' className="text">Log Out</MDBNavbarLink>
+              <MDBNavbarLink href='/' className="text">Log Out</MDBNavbarLink>
             </MDBNavbarItem>
             <MDBNavbarItem>
             </MDBNavbarItem>

@@ -9,7 +9,7 @@ function GameForm(props) {
     console.log("game likes is a thing");
     console.log(props);
     const [formInput, setFormInput] = useState("");
-    const [addGame, {loading, error, data}] = useMutation(ADD_GAME)
+    const [addGame] = useMutation(ADD_GAME)
     const navigate = useNavigate();
     const handleSubmit = (e) => {
         e.preventDefault()
@@ -38,4 +38,4 @@ function GameForm(props) {
   );
 }
 
-export default gameLikes    
+export default GameForm;
