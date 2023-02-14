@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { MDBCard,MDBCardBody,MDBListGroup, MDBListGroupItem, MDBModalBody } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
+import "./Langingp.css"
 
 function Landing(props) {
   const [gameData, setGameData] = useState([]);
@@ -32,15 +33,15 @@ function Landing(props) {
     width: "400px",
   };
   return (
-    <Tabs className="tabStyling divider">
-      <TabList>
-        <Tab className="biggerText">Hello Game Loggers</Tab>
-        <Tab className="biggerText">2022 Top Games!</Tab>
-        <Tab className="biggerText">Upcoming Releases for 2023</Tab>
-      </TabList>
+    <MDBModalBody className="MDBListGroupItemStyling divider">
+      <MDBListGroup>
+        <MDBListGroupItem className="biggerText">Hello Game Loggers</MDBListGroupItem>
+        <MDBListGroupItem className="biggerText">2022 Top Games!</MDBListGroupItem>
+        <MDBListGroupItem className="biggerText">Upcoming Releases for 2023</MDBListGroupItem>
+      </MDBListGroup>
 
-      <TabPanels>
-        <TabPanel className="landingPage">
+      <MDBCardBody>
+        <MDBCard className="landingPage">
           <div className="landingContainer">
             <h1 className="biggestText divider">
               Tired of adding all of your friend's usernames? Gamelog is here for you
@@ -53,7 +54,7 @@ function Landing(props) {
               any platform you wish.
             </h1>
           </div>
-          <img src={gameScreenshot} className="landingContainerSS"></img>
+          <img src={"public\asssets\images\bowserColladge.webp"} className="landingContainerSS"></img>
           <div className="apiContainer">
             <h1 className="biggestText">
               With RAWG API, you can see game data and ratings, plus
@@ -66,8 +67,8 @@ function Landing(props) {
               friends all-in-one place
             </h1>
           </div>
-        </TabPanel>
-        <TabPanel>
+        </MDBCard>
+        <MDBCard>
           <div className="centerText ">
             <div>
               <h1 className="biggestText">2022 Games of the Year</h1>
@@ -77,7 +78,7 @@ function Landing(props) {
                     <div key={index}>
                       <div className="game-card">
                         <Link to={`/game/${game.name}`} state={{ game: game }}>
-                          <img style={divStyle} src={game.background_image} />
+                          <img style={{divStyle}} src={game.background_image} />
                         </Link>
                         <p>{game.name}</p>
                       </div>
@@ -87,8 +88,8 @@ function Landing(props) {
               </div>
             </div>
           </div>
-        </TabPanel>
-        <TabPanel>
+        </MDBCard>
+        <MDBCard>
           <div className="centerText ">
             <div>
               <h1 className="biggestText">2023 Releases</h1>
@@ -98,7 +99,7 @@ function Landing(props) {
                     <div key={index}>
                       <div className="game-card">
                         <Link to={`/game/${game.name}`} state={{ game: game }}>
-                          <img style={divStyle} src={game.background_image} />
+                          <img style={{divStyle}} src={game.background_image} />
                         </Link>
                         <p>{game.name}</p>
                       </div>
@@ -108,9 +109,9 @@ function Landing(props) {
               </div>
             </div>
           </div>
-        </TabPanel>
-      </TabPanels>
-    </Tabs>
+        </MDBCard>
+      </MDBCardBody>
+    </MDBModalBody>
   );
 }
 
