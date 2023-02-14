@@ -1,8 +1,8 @@
-import { ADD_GAME } from "../utils/transForm"
+import { ADD_GAME } from "../../utils/transForm"
 import {useState} from 'react';
 import { useMutation } from "mongodb"
 import { useNavigate } from 'react-router-dom';
-import { PROFILE_QUERY } from "../utils/query";
+import { PROFILE_QUERY } from "../../utils/query";
 
 
 function GameForm(props) {

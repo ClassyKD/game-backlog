@@ -1,6 +1,6 @@
 import { PROFILE_QUERY } from "../utils/query";
 
-import gameLikes from "../page/gameLikes.js"
+import gameLikes from "../../page/gameLikes";
 
 function Profile() {
   const { getUsers } = useQuery(PROFILE_QUERY);
