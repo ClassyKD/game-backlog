@@ -19,7 +19,7 @@ import {
 function Login() {
   const [fillActive, setFillActive] = useState("tab-login");
 
-  const handleFillClick = (value: string) => {
+  const handleFillClick = (value, string) => {
     if (value === fillActive) {
       return;
     }
@@ -248,3 +248,4 @@ function Login() {
 }
 
 export default Login;
+console.log(MDBBtn)
