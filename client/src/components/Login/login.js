@@ -17,6 +17,13 @@ import {
   MDBNavbarLink
 } from "mdb-react-ui-kit";
 import { checkPassword, validateEmail } from "../../utils/helpers";
+import { useMutation } from '@apollo/client';
+import { LOGIN_USER } from '../../utils/mutations';
+
+import Auth from '../../utils/auth';
+import { ADD_USER } from '../../utils/mutations';
+
+
 
 function Login() {
   const [fillActive, setFillActive] = useState("tab-login");
@@ -28,52 +35,57 @@ function Login() {
 
     setFillActive(value);
   };
-const [email, setEmail] = useState('');
-  const [userName, setUserName] = useState('');
-  const [password, setPassword] = useState('');
+  const [formData, setFormState] = useState({
+    username: '',
+    email: '',
+    password: '',
+  });
   const [errorMessage, setErrorMessage] = useState('');
+  const [addUser, { error, data }] = useMutation(ADD_USER);
+  const [login, { error1, data1 }] = useMutation(LOGIN_USER);
 
-  const handleInputChange = (e) => {
-    // Getting the value and name of the input which triggered the change
-    const { target } = e;
-    const inputType = target.name;
-    const inputValue = target.value;
+  const handleInputChange = (event) => {
+    const { name, value } = event.target;
 
-    // Based on the input type, we set the state of either email, username, and password
-    if (inputType === 'email') {
-      setEmail(inputValue);
-    } else if (inputType === 'userName') {
-      setUserName(inputValue);
-    } else {
-      setPassword(inputValue);
+    setFormState({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmitSignup = async (event) => {
+    event.preventDefault();
+    console.log(formData);
+
+    try {
+      const { data } = await addUser({
+        variables: { ...formData },
+      });
+
+      Auth.login(data.addUser.token);
+    } catch (e) {
+      console.error(e);
     }
   };
 
-  const handleFormSubmit = (e) => {
-    // Preventing the default behavior of the form submit (which is to refresh the page)
-    e.preventDefault();
+  const handleFormSubmitLogin = async (event) => {
+    event.preventDefault();
+    console.log(formData);
+    try {
+      const { data } = await login({
+        variables: {email: formData.email,password:formData.password },
+      });
 
-    // First we check to see if the email is not valid or if the userName is empty. If so we set an error message to be displayed on the page.
-    if (!validateEmail(email) || !userName) {
-      setErrorMessage('Email or username is invalid');
-      // We want to exit out of this code block if something is wrong so that the user can correct it
-      return;
-      // Then we check to see if the password is not valid. If so, we set an error message regarding the password.
+      Auth.login(data.login.token);
+    } catch (e) {
+      console.error(e);
     }
-    if (!checkPassword(password)) {
-      setErrorMessage(
-        `Choose a more secure password for the account: ${userName}`
-      );
-      return;
-    }
-    //  add mutation to add a user make back end in mern 26 copy on config ans user.js and thought in schema use 41 33 34 get rid of comment 
-    //  use the resolvers use the auth and server.js make sure to nock out backend copy server.js 
-    alert(`Hello ${userName}`);
 
-    // If everything goes according to plan, we want to clear out the input after a successful registration.
-    setUserName('');
-    setPassword('');
-    setEmail('');
+    // clear form values
+    setFormState({
+      email: '',
+      password: '',
+    });
   };
 
   return (
@@ -151,8 +163,8 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
-                        name="userName"
-                        value={userName}
+                        name="email"
+                        value={formData.email}
                         type="email"
                         id="loginName"
                         label="Email or username"
@@ -162,7 +174,7 @@ const [email, setEmail] = useState('');
                       <MDBInput
                         className="mb-4"
                         name="password"
-                        value={password}
+                        value={formData.password}
                         type="password"
                         id="loginPassword"
                         label="Password"
@@ -189,7 +201,7 @@ const [email, setEmail] = useState('');
                         </MDBCol>
                       </MDBRow>
 
-                      <MDBBtn type="submit" block className="mb-4"><MDBNavbarLink href="/home" className="text-white">Sign in</MDBNavbarLink>
+                      <MDBBtn type="submit" block className="mb-4"><MDBNavbarLink href="/home" className="text-white" onClick={handleFormSubmitLogin}>Sign in</MDBNavbarLink>
                      
                       </MDBBtn>
 
@@ -253,46 +265,37 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
-                        name="name"
-                        value={userName}
-                        type="text"
-                        id="registerName"
-                        label="Name"
+                        name="username"
+                        value={formData.username}
+                        type="email"
+                        id="loginName"
+                        label="Email or username"
+                        onChange = {handleInputChange}
                       />
+
+            
 
                       <MDBInput
                         className="mb-4"
-                        name="name"
-                        value={userName}
-                        type="text"
-                        id="registerUsername"
-                        label="Username"
-                      />
-
-                      <MDBInput
-                        className="mb-4"
-                        name="Email"
-                        value={email}
+                        name="email"
+                        value={formData.email}
                         type="email"
                         id="registerEmail"
                         label="Email"
+                        onChange={handleInputChange}
                       />
 
                       <MDBInput
                         className="mb-4"
                         name="password"
-                        value={password}
+                        value={formData.password}
                         type="password"
                         id="registerPassword"
                         label="Password"
+                        onChange={handleInputChange}
+
                       />
 
-                      <MDBInput
-                        className="mb-4"
-                        type="password"
-                        id="registerRepeatPassword"
-                        label="Repeat password"
-                      />
 
                       <MDBCheckbox
                         wrapperClass="d-flex justify-content-center mb-4"
@@ -300,7 +303,7 @@ const [email, setEmail] = useState('');
                         label="I have read and agree to the terms"
                       />
 
-                      <MDBBtn type="submit" block className="mb-3">
+                      <MDBBtn type="submit" block className="mb-3" onClick={handleFormSubmitSignup}>
                       <MDBNavbarLink href="/home" className="text-white">Sign in</MDBNavbarLink>
                       </MDBBtn>
                     </form>
