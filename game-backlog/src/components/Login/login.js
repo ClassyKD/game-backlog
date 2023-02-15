@@ -156,7 +156,7 @@ const [email, setEmail] = useState('');
                         type="email"
                         id="loginName"
                         label="Email or username"
-                        onchange = {handleInputChange}
+                        onChange = {handleInputChange}
                       />
 
                       <MDBInput
@@ -166,7 +166,7 @@ const [email, setEmail] = useState('');
                         type="password"
                         id="loginPassword"
                         label="Password"
-                        onchange = {handleInputChange}
+                        onChange = {handleInputChange}
                       />
 
                       <MDBRow className="mb-4">
