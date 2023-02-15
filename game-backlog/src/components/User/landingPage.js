@@ -1,13 +1,7 @@
 import { useState, useEffect } from "react";
-<<<<<<< HEAD
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "react";
-import gameScreenshot from "../../App"
-import { Link } from "react";
-=======
 import { MDBCard,MDBCardBody,MDBListGroup, MDBListGroupItem, MDBModalBody } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import "./Langingp.css"
->>>>>>> profile
 
 function Landing(props) {
   const [gameData, setGameData] = useState([]);
@@ -60,11 +54,7 @@ function Landing(props) {
               any platform you wish.
             </h1>
           </div>
-<<<<<<< HEAD
-          <img src="" className="landingContainerSS"></img>
-=======
           <img src={"public\asssets\images\bowserColladge.webp"} className="landingContainerSS"></img>
->>>>>>> profile
           <div className="apiContainer">
             <h1 className="biggestText">
               With RAWG API, you can see game data and ratings, plus
