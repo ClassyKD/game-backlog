@@ -1,0 +1,22 @@
+{
+    "language": "English",
+    "date": "Date",
+    "question": "Please select a language",
+    "search": "Search",
+    "news1": "Some news",
+    "news2": "Another news",
+    "profile": "My profile",
+    "profileSettings": "Settings",
+    "profileLogout": "Logout",
+    "accordion1": "Item - One",
+    "accordion2": "Item - Two",
+    "accordion3": "Item - Three",
+    "accordionTxt": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vitae magna lacus. Fusce pretium urna id tellus ornare sagittis. Sed ac sagittis nibh, nec vehicula dolor. Cras et posuere mi",
+    "maskText": "Can you see me?",
+    "slide1Label": "First slide label",
+    "slide2Label": "Second slide label",
+    "slide3Label": "Third slide label",
+    "slide1Description": "English - Nulla vitae elit libero, a pharetra augue mollis interdum.",
+    "slide2Description": "English - Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+    "slide3Description": "English - Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+  }
