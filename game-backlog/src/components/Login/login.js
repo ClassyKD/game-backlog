@@ -151,8 +151,8 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
-                        name = "userName"
-                        value = {userName}
+                        name="userName"
+                        value={userName}
                         type="email"
                         id="loginName"
                         label="Email or username"
@@ -161,8 +161,8 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
-                        name = "password"
-                        value = {password}
+                        name="password"
+                        value={password}
                         type="password"
                         id="loginPassword"
                         label="Password"
@@ -249,10 +249,12 @@ const [email, setEmail] = useState('');
                         </MDBBtn>
                       </div>
 
-                      <p className="text-center">or:</p>
+                      <p className="text-center">OR</p>
 
                       <MDBInput
                         className="mb-4"
+                        name="name"
+                        value={userName}
                         type="text"
                         id="registerName"
                         label="Name"
@@ -260,6 +262,8 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
+                        name="name"
+                        value={userName}
                         type="text"
                         id="registerUsername"
                         label="Username"
@@ -267,6 +271,8 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
+                        name="Email"
+                        value={email}
                         type="email"
                         id="registerEmail"
                         label="Email"
@@ -274,6 +280,8 @@ const [email, setEmail] = useState('');
 
                       <MDBInput
                         className="mb-4"
+                        name="password"
+                        value={password}
                         type="password"
                         id="registerPassword"
                         label="Password"
@@ -308,4 +316,4 @@ const [email, setEmail] = useState('');
 }
 
 export default Login;
-console.log(MDBBtn)
+
