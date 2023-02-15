@@ -189,8 +189,8 @@ const [email, setEmail] = useState('');
                         </MDBCol>
                       </MDBRow>
 
-                      <MDBBtn type="submit" block className="mb-4">
-                        Sign in
+                      <MDBBtn type="submit" block className="mb-4"><MDBNavbarLink href="/home" className="text-white">Sign in</MDBNavbarLink>
+                     
                       </MDBBtn>
 
                       <div className="text-center">
@@ -293,7 +293,7 @@ const [email, setEmail] = useState('');
                       />
 
                       <MDBBtn type="submit" block className="mb-3">
-                        Sign in
+                      <MDBNavbarLink href="/home" className="text-white">Sign in</MDBNavbarLink>
                       </MDBBtn>
                     </form>
                   </MDBTabsPane>

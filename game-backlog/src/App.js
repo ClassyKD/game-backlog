@@ -6,13 +6,6 @@ import Footer from "./components/Footer/Footer";
 import Home from "./components/Home/Home";
 import Forgotpw from "./components/Login/Forgotpw";
 import Landing from "./components/User/landingPage";
-import Sidebar from "./components/Sidebar/sidebar";
-
-
-
-
-
-
 
 
 
@@ -26,7 +19,7 @@ function App() {
           <Route path="/forgotpw" element={<Forgotpw/>}/>
           <Route path="/mygames" element={<Landing/>}/>
           <Route path="/home" element={<Home/>}/>
-          <Route path="/side" element={<Sidebar/>}/>
+      
         </Routes>
       </BrowserRouter>
       <Footer />
