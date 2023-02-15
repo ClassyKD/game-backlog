@@ -46,6 +46,7 @@ function Form() {
       );
       return;
     }
+    // make post or put request to the server with that info.
     alert(`Hello ${userName}`);
 
     // If everything goes according to plan, we want to clear out the input after a successful registration.

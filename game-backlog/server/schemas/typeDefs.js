@@ -11,18 +11,18 @@ const typeDefs = gql`
 
   type Game {
     _id: ID
-    thoughtText: String
+    gameText: String
     thoughtAuthor: String
     createdAt: String
-    comments: [Comment]!
+    # comments: [Comment]!
   }
 
-  type Comment {
-    _id: ID
-    commentText: String
-    commentAuthor: String
-    createdAt: String
-  }
+  # type Comment {
+  #   _id: ID
+  #   commentText: String
+  #   commentAuthor: String
+  #   createdAt: String
+  # }
 
   type Auth {
     token: ID!
@@ -41,9 +41,9 @@ const typeDefs = gql`
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
     addGame(gameText: String!): Game
-    addComment(gamesId: ID!, commentText: String!): Game
+    # addComment(gamesId: ID!, commentText: String!): Game
     removeGame(gameId: ID!): Game
-    removeComment(thoughtId: ID!, commentId: ID!): Game
+    # removeComment(thoughtId: ID!, commentId: ID!): Game
   }
 `;
 
