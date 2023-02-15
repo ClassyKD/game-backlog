@@ -1,6 +1,7 @@
 import React from 'react';
 import Results from '../../page/results'
 import { useState } from 'react';
+import { MDBBtn, MDBNavbarLink } from 'mdb-react-ui-kit';
 
 
 function Home (props) {
@@ -34,8 +35,11 @@ const onSubmit = (event) => {
             <form onSubmit={onSubmit}>
             <input type="text" value={search} onChange={handleChange}/>
                 <br></br>
-                <input type="submit"/>
+
+              <MDBBtn><MDBNavbarLink href='/mygames' className='text-white'>Submit </MDBNavbarLink></MDBBtn>  
+
             </form>
+
             <Results gameResults = {gameResults}/>
         </div>
     );

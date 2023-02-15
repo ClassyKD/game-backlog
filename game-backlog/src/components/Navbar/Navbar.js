@@ -42,6 +42,7 @@ import {
             <MDBNavbarItem>
               <MDBNavbarLink href='/mygames' className="text">My Games</MDBNavbarLink>
             </MDBNavbarItem>
+            
             <MDBNavbarItem>
               <MDBNavbarLink href='/' className="text">Log Out</MDBNavbarLink>
             </MDBNavbarItem>
