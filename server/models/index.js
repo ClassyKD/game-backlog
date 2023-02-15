@@ -1,4 +1,4 @@
 const User = require('./User');
-const Games = require('./Games');
+const Games = require('./Game');
 
 module.exports = { User, Games };
