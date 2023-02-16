@@ -41,9 +41,10 @@ function Landing(props) {
       </MDBListGroup>
 
       <MDBCardBody>
+        <div className="card-fixer">
         <MDBCard className="landingPage">
-          <div className="landingContainer">
-            <h1 className="biggestText divider">
+          <div className="">
+            <h1 className="biggestText divider ">
               Tired of adding all of your friend's usernames? Gamelog is here for you
         
             </h1>
@@ -54,7 +55,18 @@ function Landing(props) {
               any platform you wish.
             </h1>
           </div>
-          <img src={"public\asssets\images\bowserColladge.webp"} className="landingContainerSS"></img>
+         
+          <MDBCard>
+            <div className="game-card-img">
+      <img  src='https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg' position='top' alt='...' />
+      </div>
+      <MDBCardBody>
+        <h2>Call of Duty Modern Warfare 2 (2022)</h2>
+        <p>
+        Call of Duty®: Modern Warfare® II drops players into an unprecedented global conflict that features the return of the iconic Operators of Task Force 141.
+        </p>
+      </MDBCardBody>
+    </MDBCard>
           <div className="apiContainer">
             <h1 className="biggestText">
               With RAWG API, you can see game data and ratings, plus
@@ -68,7 +80,9 @@ function Landing(props) {
             </h1>
           </div>
         </MDBCard>
+        </div>
         <MDBCard>
+        
           <div className="centerText ">
             <div>
               <h1 className="biggestText">2022 Games of the Year</h1>
