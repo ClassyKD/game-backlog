@@ -1,19 +1,19 @@
 const db = require('../config/connection');
 const { User, Game } = require('../models');
 const userSeeds = require('./userSeeds.json');
-const thoughtSeeds = require('./thoughtSeeds.json');
+const videoSeeds = require('./videoSeeds.json');
 
 db.once('open', async () => {
   try {
     await Game.deleteMany({});
     await User.deleteMany({});
 
-    await User.create(userSeeds);
+    const userData = await User.create(userSeeds);
 
-    for (let i = 0; i < thoughtSeeds.length; i++) {
-      const { _id, thoughtAuthor } = await Game.create(thoughtSeeds[i]);
+    for (let i = 0; i < videoSeeds.length; i++) {
+      const { _id } = await Game.create(videoSeeds[i]);
       const user = await User.findOneAndUpdate(
-        { username: thoughtAuthor },
+        { username: userData[Math.floor(Math.random()*userData.length)].username },
         {
           $addToSet: {
             games: _id,
