@@ -212,7 +212,7 @@
     width: 400px;
     height: 300px;
   }
-  .landingContainer {
+  /* .landingContainer {
     margin: auto 50px;
     padding: 25px;
     background-color: rgb(40, 40, 40);
@@ -223,7 +223,7 @@
     align-items: center;
     border-radius: 2rem;
     max-width: 30vw;
-  }
+  } */
   .landingContainerSS {
     width: 40vw;
     border-radius: 2rem;
@@ -249,9 +249,8 @@
     border-radius: 2rem;
   }
   .landingPage {
-    text-align: center;
     display: flex;
-    flex-wrap: wrap;
+    text-align: center;
     justify-content: center;
     background-color: rgb(240, 240, 240);
   }
@@ -267,18 +266,16 @@
     /* justify-content: center; */
     flex-direction: column;
   }
-  .landingContainer {
+  /* .landingContainer {
     margin: auto 50px;
     padding: 25px;
     background-color: rgb(40, 40, 40);
     color: white;
     display: flex;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
     border-radius: 2rem;
-    max-width: 30vw;
-  }
+  } */
   .searchedGame {
     width: 100vw;
     background-color: 240, 240, 240;
@@ -317,6 +314,24 @@
   .whiteText {
     color: white;
   }
+
+  .game-card-img{
+    display: flex;
+    justify-content: center;
+  }
+
+  .card-fixer{
+    margin: auto 50px;
+    padding: 25px;
+    background-color: rgb(40, 40, 40);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+
+  }
+
   @media (max-width: 500px) {
     .sBarMain {
       font-size: small;
