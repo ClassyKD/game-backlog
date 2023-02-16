@@ -1,330 +1,370 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-      "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-      sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
-  code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-      monospace;
-  }
-  #navStyle {
-    display: flex;
-    justify-content: space-between;
-    padding: 7px 3%;
-    background: rgb(40, 40, 40);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    font-size: 2rem;
-  }
-  header * {
-    color: #fff;
-  }
-  header nav a {
-    margin-left: 10px;
-    font-size: 1.5rem;
-    text-decoration: none;
-  }
-  header nav a.active {
-    text-decoration: underline;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+#navStyle {
+  display: flex;
+  justify-content: space-between;
+  padding: 7px 3%;
+  background: rgb(40, 40, 40);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 2rem;
+}
+
+header * {
+  color: #fff;
+}
+
+header nav a {
+  margin-left: 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+}
+
+header nav a.active {
+  text-decoration: underline;
+}
+
+.sBarMain {
+  font-size: x-large;
+  width: 10vw;
+  text-align: center;
+}
+
+.sidebar {
+  background-color: rgb(40, 40, 40);
+  color: #fff;
+  height: 100vh;
+  display: inline-block;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  text-decoration: none;
+}
+
+.sidebar a {
+  display: block;
+  padding: 25px 10px;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.sidebar a.active {
+  text-decoration: underline;
+  color: white;
+}
+
+.main {
+  display: flex;
+  background-color: rgb(230, 230, 230);
+}
+
+.profLogin {
+  margin: auto;
+  padding: 25px 15px;
+  height: 50%;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  background-color: rgb(40, 40, 40);
+  font-size: large;
+}
+
+.type-wrap label {
+  padding: 10px;
+  font-size: x-large;
+}
+
+.profLogin .border {
+  margin: 20px;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  border: 2px solid white;
+  background-color: rgb(40, 40, 40);
+  font-size: large;
+}
+.profile {
+  margin: auto;
+}
+.biggestText {
+  font-size: 3vh;
+}
+.biggerText {
+  font-size: x-large !important;
+}
+.centerProf {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.profContainer {
+  display: flex;
+  padding: 25px 15px;
+  height: 50%;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 1rem;
+  text-align: center;
+  width: 25vw;
+  background-color: rgb(40, 40, 40);
+}
+
+.profileContainer {
+  padding: 50px;
+}
+.profInput {
+  width: 100%;
+  margin: 20px;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  border: 2px solid white;
+  background-color: rgb(40, 40, 40);
+  font-size: large;
+}
+
+.btnStyle {
+  background-color: rgb(40, 40, 40);
+  border: 1px solid white;
+  border-radius: 1rem;
+  color: white;
+  padding: 10px;
+}
+
+.savedGames {
+  display: flex;
+  padding: 25px 15px;
+  height: 50%;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 1rem;
+  color: white;
+  background-color: rgb(40, 40, 40);
+  font-size: large;
+  align-items: center;
+}
+
+.usernameStyle {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.game-container {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.centerText {
+  text-align: center;
+  padding: 25px;
+}
+.game-card {
+  border: 1px solid black;
+  padding-bottom: 20px;
+  margin: 30px;
+  color: white;
+  background-color: rgb(50, 50, 50);
+  text-align: center;
+  border-radius: 1rem;
+}
+
+.game-card img {
+  border-radius: 1rem;
+}
+
+.game-search {
+  margin: auto;
+  padding: 50px;
+  border: 1px solid black;
+  border-radius: 1rem;
+  text-align: center;
+  color: white;
+  background-color: rgb(40, 40, 40);
+  font-size: x-large;
+  width: fit-content;
+  block-size: fit-content;
+}
+.game-search input {
+  margin: 20px;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: white;
+  border: 2px solid white;
+  background-color: rgb(40, 40, 40);
+  font-size: large;
+}
+
+.results-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  text-decoration: none;
+}
+
+.searchedGames {
+  background-color: rgb(50, 50, 50);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px;
+  margin: 25px;
+  border-radius: 2.5rem;
+}
+
+.searchedGames a {
+  color: white;
+  text-decoration: none;
+}
+
+.searchedGames img {
+  width: 400px;
+  height: 300px;
+}
+
+.landingContainer {
+  margin: auto 50px;
+  padding: 25px;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  max-width: 30vw;
+}
+
+.landingContainerSS {
+  width: 40vw;
+  border-radius: 2rem;
+}
+.divider {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.divider-black {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.tabStyling {
+  width: 100vw;
+  color: 40, 40, 40;
+}
+
+.tabStyling button.active {
+  color: white !important;
+}
+
+.apiContainer {
+  background-color: rgb(40, 40, 40);
+  color: white;
+  margin: 50px;
+  padding: 50px;
+  border-radius: 2rem;
+}
+
+.landingPage {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: rgb(240, 240, 240);
+}
+
+.sidebarlogos {
+  width: 2.25vw;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.sBarPlatforms {
+  align-items: center;
+  text-align: center;
+  display: flex;
+  /* justify-content: center; */
+  flex-direction: column;
+}
+
+.landingContainer {
+  margin: auto 50px;
+  padding: 25px;
+  background-color: rgb(40, 40, 40);
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+  max-width: 30vw;
+}
+
+.searchedGame {
+  width: 100vw;
+  background-color: 240, 240, 240;
+}
+.searchGameName {
+  background-color: rgb(40, 40, 40);
+  border-radius: 1rem;
+  text-align: center;
+  margin: 50px auto;
+  padding: 1rem;
+  color: white;
+  width: max-content;
+}
+.searchGameInfo {
+  font-size: x-large;
+  margin: auto;
+  background-color: rgb(40, 40, 40);
+  border-radius: 1rem;
+  color: white;
+  padding: 4rem;
+  width: fit-content;
+}
+.gameScreenshots {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 1rem;
+}
+.gameScreenshots img {
+  display: flex;
+  flex-direction: row;
+  width: 21vw;
+  background-color: rgb(40, 40, 40);
+  margin: 1rem;
+  border-radius: 1rem;
+}
+
+.whiteText {
+  color: white;
+}
+
+@media (max-width: 500px) {
   .sBarMain {
-    font-size: x-large;
+    font-size: small;
+    width: 5vw;
+    text-align: center;
+  }
+  .sidebar h1 {
     width: 10vw;
-    text-align: center;
+    font-size: small;
   }
-  .sidebar {
-    background-color: rgb(40, 40, 40);
-    color: #fff;
-    height: 100vh;
-    display: inline-block;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    text-decoration: none;
-  }
-  .sidebar a {
-    display: block;
-    padding: 25px 10px;
-    font-size: 1.5rem;
-    text-decoration: none;
-    color: white;
-  }
-  .sidebar a.active {
-    text-decoration: underline;
-    color: white;
-  }
-  .main {
-    display: flex;
-    background-color: rgb(230, 230, 230);
-  }
-  .profLogin {
-    margin: auto;
-    padding: 25px 15px;
-    height: 50%;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 1rem;
-    text-align: center;
-    color: white;
-    background-color: rgb(40, 40, 40);
-    font-size: large;
-  }
-  .type-wrap label {
-    padding: 10px;
-    font-size: x-large;
-  }
-  .profLogin .border {
-    margin: 20px;
-    padding: 1rem;
-    border-radius: 1rem;
-    color: white;
-    border: 2px solid white;
-    background-color: rgb(40, 40, 40);
-    font-size: large;
-  }
-  .profile {
-    margin: auto;
-  }
-  .biggestText {
-    font-size: 3vh;
-  }
-  .biggerText {
-    font-size: x-large !important;
-  }
-  .centerProf {
-    align-items: center;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-  }
-  .profContainer {
-    display: flex;
-    padding: 25px 15px;
-    height: 50%;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 1rem;
-    text-align: center;
-    width: 25vw;
-    background-color: rgb(40, 40, 40);
-  }
-  .profileContainer {
-    padding: 50px;
-  }
-  .profInput {
-    width: 100%;
-    margin: 20px;
-    padding: 1rem;
-    border-radius: 1rem;
-    color: white;
-    border: 2px solid white;
-    background-color: rgb(40, 40, 40);
-    font-size: large;
-  }
-  .btnStyle {
-    background-color: rgb(40, 40, 40);
-    border: 1px solid white;
-    border-radius: 1rem;
-    color: white;
-    padding: 10px;
-  }
-  .savedGames {
-    display: flex;
-    padding: 25px 15px;
-    height: 50%;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 1rem;
-    color: white;
-    background-color: rgb(40, 40, 40);
-    font-size: large;
-    align-items: center;
-  }
-  .usernameStyle {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
-  }
-  .game-container {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  .centerText {
-    text-align: center;
-    padding: 25px;
-  }
-  .game-card {
-    border: 1px solid black;
-    padding-bottom: 20px;
-    margin: 30px;
-    color: white;
-    background-color: rgb(50, 50, 50);
-    text-align: center;
-    border-radius: 1rem;
-  }
-  .game-card img {
-    border-radius: 1rem;
-  }
-  .game-search {
-    margin: auto;
-    padding: 50px;
-    border: 1px solid black;
-    border-radius: 1rem;
-    text-align: center;
-    color: white;
-    background-color: rgb(40, 40, 40);
-    font-size: x-large;
-    width: fit-content;
-    block-size: fit-content;
-  }
-  .game-search input {
-    margin: 20px;
-    padding: 1rem;
-    border-radius: 1rem;
-    color: white;
-    border: 2px solid white;
-    background-color: rgb(40, 40, 40);
-    font-size: large;
-  }
-  .results-container {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    text-decoration: none;
-  }
-  .searchedGames {
-    background-color: rgb(50, 50, 50);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 50px;
-    margin: 25px;
-    border-radius: 2.5rem;
-  }
-  .searchedGames a {
-    color: white;
-    text-decoration: none;
-  }
-  .searchedGames img {
-    width: 400px;
-    height: 300px;
-  }
-  .landingContainer {
-    margin: auto 50px;
-    padding: 25px;
-    background-color: rgb(40, 40, 40);
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 2rem;
-    max-width: 30vw;
-  }
-  .landingContainerSS {
-    width: 40vw;
-    border-radius: 2rem;
-  }
-  .divider {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  }
-  .divider-black {
-    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
-  }
-  .tabStyling {
-    width: 100vw;
-    color: 40, 40, 40;
-  }
-  .tabStyling button.active {
-    color: white !important;
-  }
-  .apiContainer {
-    background-color: rgb(40, 40, 40);
-    color: white;
-    margin: 50px;
-    padding: 50px;
-    border-radius: 2rem;
-  }
-  .landingPage {
-    text-align: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    background-color: rgb(240, 240, 240);
-  }
-  .sidebarlogos {
-    width: 2.25vw;
-    align-items: center;
-    padding-bottom: 1rem;
-  }
-  .sBarPlatforms {
-    align-items: center;
-    text-align: center;
-    display: flex;
-    /* justify-content: center; */
-    flex-direction: column;
-  }
-  .landingContainer {
-    margin: auto 50px;
-    padding: 25px;
-    background-color: rgb(40, 40, 40);
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    border-radius: 2rem;
-    max-width: 30vw;
-  }
-  .searchedGame {
-    width: 100vw;
-    background-color: 240, 240, 240;
-  }
-  .searchGameName {
-    background-color: rgb(40, 40, 40);
-    border-radius: 1rem;
-    text-align: center;
-    margin: 50px auto;
-    padding: 1rem;
-    color: white;
-    width: max-content;
-  }
-  .searchGameInfo {
-    font-size: x-large;
-    margin: auto;
-    background-color: rgb(40, 40, 40);
-    border-radius: 1rem;
-    color: white;
-    padding: 4rem;
-    width: fit-content;
-  }
-  .gameScreenshots {
-    display: flex;
-    flex-wrap: wrap;
-    border-radius: 1rem;
-  }
-  .gameScreenshots img {
-    display: flex;
-    flex-direction: row;
-    width: 21vw;
-    background-color: rgb(40, 40, 40);
-    margin: 1rem;
-    border-radius: 1rem;
-  }
-  .whiteText {
-    color: white;
-  }
-  @media (max-width: 500px) {
-    .sBarMain {
-      font-size: small;
-      width: 5vw;
-      text-align: center;
-    }
-    .sidebar h1 {
-      width: 10vw;
-      font-size: small;
-    }
-  }
+}

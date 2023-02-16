@@ -1,14 +1,14 @@
 import { useState, useEffect } from "react";
 import { MDBCard,MDBCardBody,MDBListGroup, MDBListGroupItem, MDBModalBody } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
-import "./Langingp.css"
+import "./User.css"
 
 function Landing(props) {
   const [gameData, setGameData] = useState([]);
   const [upcomingGameData, setUpcomingGameData] = useState([]);
 
   const grabData = () => {
-    fetch("/api/games")
+    fetch("/api/game")
       .then((res) => res.json())
       .then((data) => {
         setGameData(data.results);
