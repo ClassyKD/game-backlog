@@ -1,29 +1,28 @@
-import { PROFILE_QUERY } from '../../../utils/query';
-
+import { PROFILE_QUERY } from '../../utils/queries';
+import { useQuery } from "@apollo/client"
 
 function Users() {
-    const { loading, error, data } = useQuery(PROFILE_QUERY)
+    const { loading, data } = useQuery(PROFILE_QUERY)
 
     return(
         <div className="">
-            {error && <p className="error">{error.message}</p>}
 
             {loading && <p>Loading user profiles.</p>}
 
-            {data && !data.getUsers.length && <p>No avalible users</p>}
 
             {data && (
                 <span className='game-container'>
-                    {data.getUsers.map((user,index) => {
-                        return(
-                            <div key={index} className="game-card">
-                                <h3>User Email: {user.email}</h3>
-                                <h3>Gamer Tag: {user.gamerTag}</h3>
-                                <h3>Favorite Console: {user.faveConsole}</h3>
-                                <h3>Favorite Games: {user.library.game}</h3>
+                        
+                            <div className="game-card">
+                                <h3>User Email: {data.user.username}</h3>
+                                {data.user.games.map(game => (
+                                    <div>
+                                    <p>{game.gameName}</p>
+                                    <img src={game.gameImg}/>
+                                    </div>
+                                ))}
                             </div>
-                        )
-                    })}
+                        
                 </span>
             )}
         </div>

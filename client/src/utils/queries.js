@@ -58,3 +58,16 @@ export const QUERY_ME = gql`
     }
   }
 `;
+
+export const PROFILE_QUERY = gql`
+query User {
+  user {
+    username
+    games {
+      _id
+      gameName
+      gameImg
+    }
+  }
+}
+`

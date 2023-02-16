@@ -2,31 +2,32 @@ import { useState, useEffect } from "react";
 import { MDBCard, MDBCardBody, MDBListGroup, MDBListGroupItem, MDBModalBody } from "mdb-react-ui-kit";
 import { Link } from "react-router-dom";
 import "./Langingp.css"
+import Users from "./User"
 
 function Landing(props) {
   const [gameData, setGameData] = useState([]);
   const [upcomingGameData, setUpcomingGameData] = useState([]);
 
-  const grabData = () => {
-    fetch("/api/games")
-      .then((res) => res.json())
-      .then((data) => {
-        setGameData(data.results);
-        console.log(data.results);
-      });
-  };
+  // const grabData = () => {
+  //   fetch("/api/games")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setGameData(data.results);
+  //       console.log(data.results);
+  //     });
+  // };
 
-  const grabUpcomingGames = () => {
-    fetch("/api/upcoming-releases")
-      .then((res) => res.json())
-      .then((data) => {
-        setUpcomingGameData(data.results);
-        console.log(data.results);
-      });
-  };
+  // const grabUpcomingGames = () => {
+  //   fetch("/api/upcoming-releases")
+  //     .then((res) => res.json())
+  //     .then((data) => {
+  //       setUpcomingGameData(data.results);
+  //       console.log(data.results);
+  //     });
+  // };
 
-  useEffect(grabData, []);
-  useEffect(grabUpcomingGames, []);
+  // useEffect(grabData, []);
+  // useEffect(grabUpcomingGames, []);
 
   const divStyle = {
     height: "250px",
@@ -39,7 +40,7 @@ function Landing(props) {
         <MDBListGroupItem className="biggerText">2022 Top Games!</MDBListGroupItem>
         <MDBListGroupItem className="biggerText">Upcoming Releases for 2023</MDBListGroupItem>
       </MDBListGroup>
-
+      
       <MDBCardBody>
         <div className="card-fixer">
           <MDBCard className="landingPage">
@@ -54,7 +55,7 @@ function Landing(props) {
                 any platform you wish.
               </h1>
             </div>
-
+            <Users></Users>
             <MDBCard>
               <div className="game-card-img">
                 <img src='https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg' position='top' alt='...' />
