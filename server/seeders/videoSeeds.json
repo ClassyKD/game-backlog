@@ -38,5 +38,53 @@
   {
     "gameName": "Call of Duty Modern Warfare 2 (2022)",
     "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/1938090/header.jpg"
+  },
+  {
+    "gameName": "NBA 2K23",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/1919590/header.jpg"
+  },
+  {
+    "gameName": "Baldur's Gate 3",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg"
+  },
+  {
+    "gameName": "GUILTY GEAR -STRIVE-",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/1384160/header.jpg"
+  },
+  {
+    "gameName": "Street Fighter V",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/310950/header.jpg"
+  },
+  {
+    "gameName": "ULTIMATE MARVEL VS. CAPCOM 3",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/357190/header.jpg"
+  },
+  {
+    "gameName": "THE KING OF FIGHTERS XV",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/1498570/header.jpg"
+  },
+  {
+    "gameName": "Counter-Strike: Global Offensive",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg"
+  },
+  {
+    "gameName": "Like a Dragon: Ishin!",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/1805480/header.jpg"
+  },
+  {
+    "gameName": "FINAL FANTASY XIV: Endwalker",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/1592500/header.jpg"
+  },
+  {
+    "gameName": "Total War: WARHAMMER III",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/1142710/header.jpg"
+  },
+  {
+    "gameName": "Warhammer: Vermintide 2",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/552500/header.jpg"
+  },
+  {
+    "gameName": "Hi-Fi RUSH",
+    "gameImg": "https://cdn.cloudflare.steamstatic.com/steam/apps/1817230/header.jpg"
   }
 ]
